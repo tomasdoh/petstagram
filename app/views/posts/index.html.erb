@@ -3,5 +3,6 @@
 
   <% @posts.each do |post| %>
       <p><%= post.caption %></p>
+      <%= image_tag(post.image) if post.image.attached? %><br>
       <p><%= link_to 'Show', post_path(post) %></p>
   <% end %>

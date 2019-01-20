@@ -3,7 +3,9 @@
 <%= form_with scope: :post, url: posts_path, local: true do |form| %>
   <p>
     <%= form.label :caption %><br>
-    <%= form.text_area :caption %>
+    <%= form.text_area :caption %><br>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
   </p>
 
   <p>
