@@ -1,2 +1,3 @@
 <p><%=@post.caption%></p>
-  <%=image_tag(@post.image) if @post.image.attached? %>
+  <%=image_tag(@post.image, size: "240x160") if @post.image.attached? %>
+<%= react_component 'Test' %>

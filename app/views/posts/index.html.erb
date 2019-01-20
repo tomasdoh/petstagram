@@ -1,8 +1,8 @@
-<h1>All my instagram friends' latest posts will appear here</h1>
+<h1>Petstagram</h1>
 
 
-  <% @posts.each do |post| %>
-      <p><%= post.caption %></p>
-      <%= image_tag(post.image) if post.image.attached? %><br>
-      <p><%= link_to 'Show', post_path(post) %></p>
-  <% end %>
+<% @posts.each do |post| %>
+  <p><%= post.caption %></p>
+  <%= image_tag(post.image, size: "240x160") if post.image.attached? %><br>
+  <p><%= link_to 'Show', post_path(post) %></p>
+<% end %>
